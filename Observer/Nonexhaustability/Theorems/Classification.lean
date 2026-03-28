@@ -87,4 +87,30 @@ theorem awareness_residual_designated_admissible :
     AdmissibleAwarenessResidual ObserverExhaustionRoute.awarenessResidual :=
   rfl
 
+/--
+**Route-partition residual theorem** — within the formal `ObserverExhaustionRoute` partition,
+any route that is not **A**, not **B**, and not **C** is classified as **D** (`awarenessResidual`).
+
+This does **not** quantify over all imaginable informal observer theories; it exhausts the
+formal partition already introduced in ONE. The paper can therefore say that *within the stated
+route vocabulary* the awareness-grounded lane is the only surviving classification.
+-/
+theorem route_partition_residual_of_not_ABC (r : ObserverExhaustionRoute)
+    (hA : r ≠ .parametricSelfModel)
+    (hB : r ≠ .internalClosure)
+    (hC : r ≠ .totalCertification) :
+    r = .awarenessResidual := by
+  cases r with
+  | parametricSelfModel => exact absurd rfl hA
+  | internalClosure     => exact absurd rfl hB
+  | totalCertification  => exact absurd rfl hC
+  | awarenessResidual   => rfl
+
+theorem observer_route_classification_residual (r : ObserverExhaustionRoute)
+    (hA : r ≠ .parametricSelfModel)
+    (hB : r ≠ .internalClosure)
+    (hC : r ≠ .totalCertification) :
+    AdmissibleAwarenessResidual r :=
+  route_partition_residual_of_not_ABC r hA hB hC
+
 end Observer.Nonexhaustability
