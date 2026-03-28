@@ -1,37 +1,26 @@
 # observer-non-exhaustability-lean
 
-**Machine-checked layer** for [**Observer Non-Exhaustibility (ONE)**](../specs/INCOMPLETE/IN-PROCESS/EPIC_001_OBSERVER_NON_EXHAUSTIBILITY/EPIC_001_MASTER_ORCHESTRATION.md): thin interfaces, route types, and imported lemmas per **`SPEC_003_RCS`** Lean policy — **not** a fourth obstruction engine and **not** a home for RI/RFO/ICA flagship reproofs.
+**Machine-checked layer** for **Observer Non-Exhaustibility (ONE)** when this repo is checked out **inside** the outer project: see outer [`specs/INCOMPLETE/IN-PROCESS/EPIC_001_OBSERVER_NON_EXHAUSTIBILITY/EPIC_001_MASTER_ORCHESTRATION.md`](../../specs/INCOMPLETE/IN-PROCESS/EPIC_001_OBSERVER_NON_EXHAUSTIBILITY/EPIC_001_MASTER_ORCHESTRATION.md). Thin interfaces, route types, imported lemmas per **`SPEC_003_RCS`** Lean policy — **not** a fourth obstruction engine and **not** a home for RI/RFO/ICA flagship reproofs.
 
-**Spelling:** GitHub repo slugs use **Exhaustability** (`observer-non-exhaustability-lean`). The wider program name in specs and papers remains **Non-Exhaustibility** / **ONE**.
+**Spelling:** GitHub slugs use **Exhaustability**; specs and papers use **Non-Exhaustibility** / **ONE**.
 
-## Layout (in the outer repo)
+## Repository layout (same pattern as Internal-Completion-Architecture)
 
-This directory lives inside the **outer** workspace:
-
-- **Outer (specs + docs + orchestration):** `Observer-Non-Exhaustibility` on GitHub — clone this for full project context.
-- **Inner (this Lake package):** the same folder is also published as its own private repo **`observer-non-exhaustability-lean`** for Lean-only checkouts and CI.
+- This directory is its **own git repository**.
+- The **outer** repo **`Observer-Non-Exhaustibility`** lists it as a **submodule** (see outer `.gitmodules`: `url = ./observer-non-exhaustability-lean`, resolving to the sibling GitHub repo under the same org).
+- **Lean work:** commit **here** (`cd observer-non-exhaustability-lean && git commit …`).
+- **Outer** (specs, docs, submodule pointer): commit from the parent root **after** updating this repo when both change.
 
 ## Build
 
-Always build from **this directory** (short path; avoids Mathlib path-length issues on some setups):
-
 ```bash
-cd observer-non-exhaustability-lean
+cd observer-non-exhaustability-lean   # or stay here if already in submodule root
 lake build
 ```
 
-## Push this library to its own GitHub remote
+## Publishing the submodule remote
 
-The outer repo tracks these files as a normal subdirectory. To update the **standalone** `observer-non-exhaustability-lean` GitHub repo after committing in the outer project:
-
-```bash
-# From outer repo root (replace USER and check default branch name)
-git subtree split -P observer-non-exhaustability-lean -b split-observer-nonexhaustability-lean
-git push git@github.com:USER/observer-non-exhaustability-lean.git split-observer-nonexhaustability-lean:main
-git branch -D split-observer-nonexhaustability-lean
-```
-
-Alternatively, maintain a separate clone of `observer-non-exhaustability-lean`, copy changes from this subdirectory, and push from that clone.
+After the GitHub repo exists, ensure the outer `.gitmodules` `url` is the SSH or HTTPS clone URL you want (or keep the relative `./observer-non-exhaustability-lean` if that matches your org layout). From the **outer** root: `git submodule sync`, then commit `.gitmodules` if it changed.
 
 ## Package
 
