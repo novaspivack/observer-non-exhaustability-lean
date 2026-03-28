@@ -31,12 +31,12 @@ as a sibling of `.lake/packages/reflexive-closure-lean` (that repo uses `require
 -/
 require «nems-lean» from git
   "https://github.com/novaspivack/nems-lean.git"
-  @ "1a5f0e102ab021696637eab541f1765c0539e381"
+  @ "d1379b2d6d01b1c652ae65b65e1fab97b9b6b6b3"
 
 /-- **SEM + awareness arc** — reflexive-closure stack (`SemanticSelfReference`, `ReflexiveClosure`, …). -/
 require «reflexive-closure-lean» from git
   "https://github.com/novaspivack/reflexive-closure-lean.git"
-  @ "00b7dc213e6f11e98bf69e4e0d2be955446d8372"
+  @ "d8a169dc0d3ee80e031b9daa0b7d803ffcb26d4b"
 
 /-- **Mathlib** — declare **last** for cache hash alignment (Lake / Mathlib post-update hooks). -/
 require mathlib from git
