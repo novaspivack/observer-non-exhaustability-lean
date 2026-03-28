@@ -9,17 +9,13 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{xcolor}
-\usepackage[most]{tcolorbox}
+\usepackage{tcolorbox}
 \usepackage{microtype}
 
 \newtcolorbox{keybox}[1][]{
-  colback=blue!4,
-  colframe=blue!35,
-  arc=3pt,
-  boxrule=0.5pt,
-  fonttitle=\bfseries,
-  breakable,
-  #1
+  colback=blue!4, colframe=blue!35,
+  arc=3pt, boxrule=0.5pt,
+  fonttitle=\bfseries, #1
 }
 
 \ExplSyntaxOn
@@ -156,6 +152,14 @@ are blocked.
 
 This paper provides exactly that classification.
 
+\begin{keybox}[title={The structural gap this paper fills}]
+Formal diagonal work often stops at negative obstruction; phenomenology at
+descriptive insight; computation at implementation bounds.  The missing
+piece is a \textbf{route classification}: which internal strategies could
+in principle exhaust an observer, which are blocked (and how), and what
+positive architecture remains once they are.
+\end{keybox}
+
 \begin{keybox}[title={Central thesis}]
 Observerhood is not internally exhaustible by the principal internal
 reductive strategies.  It cannot be fully exhausted by parametric
@@ -232,6 +236,16 @@ limits, and artifact structure.  \Cref{sec:conclusion} concludes.
 This paper contains three kinds of claims.  They must be sharply
 distinguished.
 
+\begin{keybox}[title={Three layers readers must not conflate}]
+\textbf{(1)~Discharged engines:} base theorems in external \Lean{}
+libraries (\RI, \RFO, \SEM, awareness arc).  \textbf{(2)~\ONE{}
+packaging:} route type, bridge wrappers, summit conjunction, and
+route-partition residual in this repository.  \textbf{(3)~Synthesis
+conclusions:} the prose classification that composes those surfaces;
+the claim that \emph{every} informal theory falls under the partition is
+synthesis-level, not a single packaged lemma.
+\end{keybox}
+
 \begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
 \item \textbf{Discharged engine theorems.}
       These are theorems proved in external machine-checked \Lean{}
@@ -298,6 +312,12 @@ We ask the following question.
 \emph{What would it mean for an observer to fully exhaust itself from
 within, and can it be done?}
 \end{quote}
+
+\begin{keybox}[title={The guiding question}]
+What would full internal exhaustion require, which principal internal
+strategies might deliver it, and---once the reductive lanes fail---what
+admissible observer architecture is left?
+\end{keybox}
 
 To make this precise, we need a working definition.
 
@@ -366,6 +386,15 @@ The synthesis uses four theorem pillars.
       articulation, and manifestation.
 \end{enumerate}
 
+\begin{keybox}[title={Four pillars of the synthesis}]
+Representational incompleteness (parametric self-model / diagonal);
+reflective fold obstruction (closure vs architectural fold); internal
+completion plus semantic self-description (certification and final
+theory); awareness arc (non-collapsing, minimally ternary residual).
+Each pillar is a discharged engine or program slice composed here into
+one classification story---not reproved inside \ONE.
+\end{keybox}
+
 The current \ONE{} repository is intentionally thin.  It is a final
 synthesis-and-classification layer, not a duplicate proof engine.  Its
 associated thin \Lean{} packaging layer introduces route vocabulary and
@@ -424,6 +453,14 @@ reach}, and what the observer \emph{can certify about itself}.  A strategy
 that does not reduce to any of these is, by definition, not an internal
 reductive strategy in the sense of \Cref{def:strategy}, and therefore
 falls outside the scope of Routes A--C.
+
+\begin{keybox}[title={Why Routes A--C exhaust the reductive attack}]
+They span the three natural internal ``handles'': how the observer is
+\emph{modeled}, what states are \emph{reachable} by internal steps, and
+what it can \emph{certify} about itself.  A strategy outside these handles
+is not an internal reductive exhaustion attempt in the sense used here; it
+already lives in the residual lane.
+\end{keybox}
 
 \begin{example}[Route A in miniature]
 \label{ex:routeA}
@@ -655,6 +692,12 @@ A merely negative result would still underdetermine the picture.  One
 could say: the observer cannot exhaust itself by these routes, but perhaps
 that leaves only an opaque remainder or an appeal to ignorance.
 
+\begin{keybox}[title={Negation alone does not pick out the survivor}]
+Blocking Routes A--C shows what observerhood is \emph{not} in terms of
+those reductive templates.  A full synthesis must still say what
+observerhood \emph{is} in admissible positive form.
+\end{keybox}
+
 That is not the path taken here.  The argument has a structural hinge:
 
 \begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
@@ -690,6 +733,12 @@ A skeptical reader may ask: could the awareness-grounded residual itself
 be redescribed as a richer self-model, a more general internal closure, or
 a more powerful certifier?  If so, Route~D would be merely A, B, or C in
 nicer language.
+
+\begin{keybox}[title={The collapse worry}]
+If the residual were only a stronger instance of a blocked route, the
+whole classification would be verbal: ``Route~D'' would not deserve its
+own lane.  The next clauses show why that collapse does not occur.
+\end{keybox}
 
 The answer is no, and the reasons are specific.
 
@@ -731,6 +780,14 @@ residual is structurally distinguished from every blocked route.
 
 The awareness arc is not a cloud of references.  It is a minimal survivor
 spine with four stages, each adding a necessary structural ingredient.
+
+\begin{keybox}[title={The four-stage positive spine}]
+\textbf{Stage~1}---ObserverCorollary / ReflexiveClosure (non-collapse,
+irreducible distance, minimal ternary closure).  \textbf{Stage~2}---ReflexiveUnfolding
+(no terminal completion).  \textbf{Stage~3}---AwarenessGround /
+AlphaNonNull (locus, non-object-level presence).  \textbf{Stage~4}---UnifiedPresence
+/ GoldenBridge (ground, articulation, manifestation as one coordinated fact).
+\end{keybox}
 
 \subsection*{Stage 1: ObserverCorollary and ReflexiveClosure}
 
@@ -1008,6 +1065,13 @@ This paper inhabits a crossing point: where the diagonal traditions, the
 formal incompleteness traditions, and the phenomenological traditions
 become composable in a single synthesis theorem.
 
+\begin{keybox}[title={A crossing point of traditions}]
+The synthesis is not ``more of the same'' from any single field.  It is
+the point at which obstruction theorems, certification barriers, and
+awareness-grounded structure are jointly organized into one
+observer-architecture classification.
+\end{keybox}
+
 %% ===================================================================
 \section{Honest limits and non-claims}
 \label{sec:limits}
@@ -1033,6 +1097,13 @@ become composable in a single synthesis theorem.
       classificatory and structural.
 \end{enumerate}
 
+\begin{keybox}[title={Honest limits as methodological strength}]
+Scope is narrow on purpose: consume discharged engines, state what the
+\Lean{} packaging certifies, and separate that from omnibus philosophical
+claims.  What the paper does not assert is part of what makes what it
+does assert checkable and adversarially durable.
+\end{keybox}
+
 These limits are strengths rather than weaknesses.  They keep the
 synthesis honest.
 
@@ -1056,6 +1127,13 @@ The methodological point matters.  The summit claim of this paper is not
 backed by hand-waving references to prior work alone; it is backed by a
 deliberately thin machine-checked synthesis layer whose task is exactly to
 certify the case partition and final packaging surface.
+
+\begin{keybox}[title={Engines vs \ONE{} packaging}]
+The heavy proofs live in \RI, \RFO, \ICA/\SEM, and the reflexive-closure
+libraries.  \ONE{} contributes the case partition vocabulary, import
+wrappers, summit conjunction, and route-partition residual theorem---a
+thin certification layer, not a fourth independent obstruction program.
+\end{keybox}
 
 \subsection*{What \ONE{} proves directly}
 
