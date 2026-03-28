@@ -16,9 +16,13 @@ See outer **`SPEC_003_RCS`** and **`EPIC_001`**.
 | `Observer/Nonexhaustability/Bridge/FromRFO.lean` | **Route B** — RFO fold pattern (`SPEC_013` bridge). |
 | `Observer/Nonexhaustability/Bridge/FromCertification.lean` | **Route C** — `no_final_self_theory` (SEM); ICA/adequacy re-exports **TODO** when pinned. |
 | `Observer/Nonexhaustability/Bridge/FromAwareness.lean` | **Route D** — re-exports awareness arc theorems. |
-| `Observer/Nonexhaustability/Theorems/Classification.lean` | **Summit packaging** — `observer_non_exhaustibility_summit` (∧ of negative engines). |
+| `Observer/Nonexhaustability/Theorems/Classification.lean` | **Summit packaging** — `observer_non_exhaustibility_summit` (∧ of negative engines); **partition** — `observer_exhaustion_route_exhaustive_four`, `route_partition_residual_of_not_ABC`, `observer_route_classification_residual`. |
 
-**Summit theorem names:** `observer_non_exhaustibility_summit`, `observer_non_exhaustibility_classification`, `only_awareness_residual_route_remains` (same proof; paper-facing aliases).
+**Summit / alias names:** `observer_non_exhaustibility_summit`, `observer_non_exhaustibility_classification`, `only_awareness_residual_route_remains` (same proof).
+
+**Partition lemmas (formal `ObserverExhaustionRoute` only):** `observer_exhaustion_route_exhaustive_four` (four-way tag disjunction); `route_partition_residual_of_not_ABC` / `observer_route_classification_residual` (not A,B,C ⇒ D).
+
+**Outward inventory:** outer repo **`MANIFEST.md`** + **`NOTES/FORMALIZATION_MAP.md`**; **LaTeX appendix** in `paper/Observer_Non-Exhaustibility.tex` --- keep in sync when you add declarations.
 
 ## Dependencies (Lake / git pins)
 

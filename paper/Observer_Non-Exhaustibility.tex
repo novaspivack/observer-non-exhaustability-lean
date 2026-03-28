@@ -227,7 +227,9 @@ not a disguised instance of Routes A--C.
 \Cref{sec:spine} develops the positive survivor architecture as a minimal
 four-stage spine.  \Cref{sec:summit} states the Observer Non-Exhaustibility
 theorem.  \Cref{sec:novelty,sec:limits,sec:artifact} discuss novelty,
-limits, and artifact structure.  \Cref{sec:conclusion} concludes.
+limits, and artifact structure.  \Cref{app:formalization} tabulates the
+\Lean{} packaging declarations aligned with the repository inventory.
+\Cref{sec:conclusion} concludes.
 
 %% ===================================================================
 \section{Claim surface and theorem status}
@@ -239,8 +241,9 @@ distinguished.
 \begin{keybox}[title={Three layers readers must not conflate}]
 \textbf{(1)~Discharged engines:} base theorems in external \Lean{}
 libraries (\RI, \RFO, \SEM, awareness arc).  \textbf{(2)~\ONE{}
-packaging:} route type, bridge wrappers, summit conjunction, and
-route-partition residual in this repository.  \textbf{(3)~Synthesis
+packaging:} route type, bridge wrappers, summit conjunction,
+four-way exhaustiveness of the route tag, and route-partition residual
+in this repository (Appendix~\ref{app:formalization}).  \textbf{(3)~Synthesis
 conclusions:} the prose classification that composes those surfaces;
 the claim that \emph{every} informal theory falls under the partition is
 synthesis-level, not a single packaged lemma.
@@ -279,9 +282,14 @@ synthesis-level, not a single packaged lemma.
              \leanref{certification\_route\_engine}).
       \item Summit conjunction
             (\leanref{observer\_non\_exhaustibility\_summit}).
+      \item Formal route-tag **exhaustiveness**
+            (\leanref{observer\_exhaustion\_route\_exhaustive\_four}):
+            every value of \leanref{ObserverExhaustionRoute} is
+            Route~A, B, C, or~D.
       \item Route-partition residual
-            (\leanref{route\_partition\_residual\_of\_not\_ABC}):
-            within the formal route vocabulary, any route that is not A,
+            (\leanref{route\_partition\_residual\_of\_not\_ABC},
+             \leanref{observer\_route\_classification\_residual}):
+            within that vocabulary, any tag that is not A,
             not B, and not C is classified as D.
       \end{itemize}
 
@@ -300,6 +308,12 @@ This three-layer separation is maintained throughout.  When we write
 ``\RI{} proves'' we mean layer~(1).  When we write ``the \ONE{} layer
 certifies'' we mean layer~(2).  When we write ``the synthesis concludes''
 we mean layer~(3).
+
+\medskip
+\noindent
+For declaration-level alignment with the outer repository, see
+Appendix~\ref{app:formalization} (mirrors \texttt{MANIFEST.md} and
+\texttt{NOTES/FORMALIZATION\_MAP.md}).
 \end{remark}
 
 %% ===================================================================
@@ -964,10 +978,13 @@ blocks Route~B, and \ICA{} + \SEM{} block Route~C.  Clause~(ii) follows
 from \Cref{prop:pos}: the awareness arc supplies the four-stage survivor
 architecture.  Clause~(iii) is the \ONE{} packaging theorem
 \leanref{route\_partition\_residual\_of\_not\_ABC}, proved by case
-analysis on the formal route type.
+analysis on the formal route type, preceded in the same module by the
+four-way disjunction \leanref{observer\_exhaustion\_route\_exhaustive\_four}
+(Appendix~\ref{tab:one-packaging}).
 
 The thin \Lean{} layer certifies the route vocabulary, bridge wrappers,
-summit conjunction, and route-partition residual.  The strongest
+summit conjunction, four-way route-tag exhaustiveness, and the
+route-partition residual.  The strongest
 prose-level ``only Route~D remains'' claim is a synthesis theorem backed
 by these theorem surfaces---not a single new foundation theorem proved
 wholly inside \ONE{} alone.
@@ -1087,7 +1104,8 @@ observer-architecture classification.
 \item It does not claim that the current thin \Lean{} packaging layer has
       proved every philosophically natural version of ``only Route~D
       remains.''  The layer certifies the route vocabulary, bridge
-      wrappers, summit conjunction, and route-partition residual.  The
+      wrappers, summit conjunction, four-way exhaustiveness of the route
+      tag, and route-partition residual (Appendix~\ref{app:formalization}).  The
       universal informal claim remains synthesis-level.
 \item It does not claim that the awareness residual is reduced to a
       single slogan.  The positive lane remains articulated across a
@@ -1120,7 +1138,8 @@ thin packaging layer rather than a new engine.  Its role is to provide:
       surface;
 \item awareness-side exports for the positive residual lane;
 \item a summit conjunction theorem and aliases for the synthesis surface;
-\item a route-partition residual theorem over the formal route vocabulary.
+\item a four-way exhaustiveness lemma and a route-partition residual
+      theorem over the formal route vocabulary.
 \end{enumerate}
 
 The methodological point matters.  The summit claim of this paper is not
@@ -1144,6 +1163,13 @@ Route~D remains'' claim is a synthesis theorem backed by those theorem
 surfaces, not a giant new foundation theorem proved wholly inside \ONE{}
 alone.  This is stated with surgical honesty so that the reader never
 confuses the packaging layer with the engine proofs.
+
+\medskip
+\noindent
+The tabular inventory in Appendix~\ref{app:formalization} is the
+authoritative crosswalk for packaging declarations as stored in the
+\texttt{Observer-Non-Exhaustibility} repository; the consolidated engine
+cite index remains \texttt{NOTES/Combined\_Lean\_Manifests.md}.
 
 %% ===================================================================
 \section{Conclusion}
@@ -1176,6 +1202,96 @@ That is the classification theorem of Observer Non-Exhaustibility.  The
 claim is both negative and positive: negative, because it blocks the
 principal reductive routes; positive, because it identifies the survivor
 structure rather than leaving only an unnamed gap.
+
+%% ===================================================================
+\appendix
+
+\section{\texorpdfstring{Formalization inventory (\Lean)}{Formalization inventory (Lean)}}
+\label{app:formalization}
+
+\noindent
+Table~\ref{tab:one-packaging} lists the \emph{thin packaging} declarations
+under namespace \texttt{Observer.Nonexhaustability} in the
+\texttt{observer-non-exhaustability-lean} submodule.  The same rows are
+maintained in the outer repository as \texttt{MANIFEST.md} (\ONE{}
+packaging \Lean{} table), \texttt{ARTIFACT.md}, and
+\texttt{NOTES/FORMALIZATION\_MAP.md}.  Discharged-engine proof obligations
+live in the libraries cited in \cref{sec:status}; the concatenated
+cross-library manifest is \texttt{NOTES/Combined\_Lean\_Manifests.md}.
+
+\medskip
+\begin{table}[p]
+\centering
+\caption{Thin \ONE{} packaging layer: modules and principal declarations.}
+\label{tab:one-packaging}
+{\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.14\linewidth}
+  >{\raggedright\arraybackslash}p{0.52\linewidth}
+  >{\raggedright\arraybackslash}p{0.30\linewidth}@{}}
+\toprule
+\textbf{Layer} & \textbf{Module / declaration} & \textbf{Role} \\
+\midrule
+Route tag &
+  \texttt{Core/Routes.lean}: inductive type \leanref{ObserverExhaustionRoute}. &
+  Finite vocabulary for Routes A--D. \\
+Route A bridge &
+  \texttt{Bridge/FromRI.lean}: \leanref{ParametricSelfModelRouteBlocked};
+  \leanref{no\_observer\_exhaustion\_via\_parametric\_self\_model};
+  \leanref{ri\_route\_engine}. &
+  Imports \RI{} summit surface (no reproof). \\
+Route B bridge &
+  \texttt{Bridge/FromRFO.lean}:
+  \leanref{no\_observer\_exhaustion\_via\_internal\_closure};
+  \leanref{rfo\_route\_engine}. &
+  Fold / preserved-invariant mismatch packaging. \\
+Route C bridge &
+  \texttt{Bridge/FromCertification.lean}:
+  \leanref{no\_observer\_exhaustion\_via\_total\_internal\_self\_theory};
+  \leanref{certification\_route\_engine} (barrier entry point also available). &
+  \SEM{} \leanref{no\_final\_self\_theory} lane; ICA/adequacy bridge
+  \emph{tracked as repository TODO} when Lake pins allow. \\
+Route D exports &
+  \texttt{Bridge/FromAwareness.lean}: re-exports including
+  \leanref{no\_self\_exhausting\_observer},
+  \leanref{closure\_without\_collapse},
+  \leanref{irreducible\_reflexive\_distance\_under\_diagonal},
+  \leanref{noncollapsing\_reflexive\_closure\_minimally\_ternary},
+  \leanref{no\_terminal\_reflexive\_completion},
+  \leanref{semantic\_remainder\_implies\_not\_terminal},
+  \leanref{unified\_three\_aspects},
+  \leanref{golden\_bridge}. &
+  Positive residual cite surface (proofs in reflexive-closure suite). \\
+Summit conjunction &
+  \texttt{Theorems/Classification.lean}:
+  \leanref{observer\_non\_exhaustibility\_summit}
+  (= \leanref{observer\_non\_exhaustibility\_classification},
+  \leanref{only\_awareness\_residual\_route\_remains}). &
+  $\wedge$ of the three negative engine \emph{statement shapes} packaged
+  for \ONE. \\
+Route predicate &
+  \texttt{Theorems/Classification.lean}:
+  \leanref{AdmissibleAwarenessResidual};
+  \leanref{awareness\_residual\_designated\_admissible}. &
+  Route~D admissibility predicate (scaffold for future specs). \\
+Partition (exhaustive) &
+  \texttt{Theorems/Classification.lean}:
+  \leanref{observer\_exhaustion\_route\_exhaustive\_four}. &
+  Every formal route tag is A$\lor$B$\lor$C$\lor$D (finite menu). \\
+Partition (residual) &
+  \texttt{Theorems/Classification.lean}:
+  \leanref{route\_partition\_residual\_of\_not\_ABC};
+  \leanref{observer\_route\_classification\_residual}. &
+  Within that menu, $\neg$A$\land\neg$B$\land\neg$C $\Rightarrow$~D. \\
+Root import &
+  \texttt{Observer/Nonexhaustability.lean} &
+  Aggregates \texttt{Core}, \texttt{Bridge.*}, \texttt{Theorems}. \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\noindent
+\textbf{Scope note.} This appendix records \emph{packaging} only.  It does
+not list every lemma in \RI, \RFO, NEMS, or reflexive-closure libraries.
 
 \begin{thebibliography}{99}
 
