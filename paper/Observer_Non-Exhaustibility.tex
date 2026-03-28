@@ -124,23 +124,14 @@ mysticism or reductive overreach.
 \label{sec:intro}
 
 Whether an observer can fully know itself from within is one of the oldest
-questions in philosophy and one of the newest in formal science.  It
-appears in classical reflection on self-knowledge, in modern reflexivity
-problems, in phenomenological discussion of self-presence, in
-self-reference and incompleteness theorems, in computational questions
-about self-interpretation, and in contemporary disputes over
-consciousness, AI, and observers in physics.  Plato and Aristotle already
-raised the problem of reflexive knowledge.  Augustine and later
-introspective traditions sharpened it in inward form.  Descartes made
-self-presence central to the modern subject.  Kant drew constitutive
-limits around the self's possible cognition of itself.  Hegel radicalized
-reflexivity.  Husserl and Merleau-Ponty transformed the issue into one of
-givenness, manifestation, and lived presence.  In another tradition,
-G\"odel, Turing, Lawvere, Yanofsky, and Hofstadter explored the structural
-consequences of self-reference, diagonalization, and strange loops.  The
-contemporary landscape adds new versions: self-modeling artificial agents,
-recursive self-improvement, simulation arguments, and the role of observers
-in physical theory.
+questions in philosophy and one of the newest in formal science.  It runs
+through classical and modern reflection on self-knowledge, formal
+self-reference, phenomenology, computation, and disputes over
+consciousness, AI, and observers in physics.  Three lineages matter most
+here: a \emph{classical and modern subjectivity} thread (Plato, Aristotle,
+Augustine, Descartes, Kant, Hegel); a \emph{formal diagonal and reflexivity}
+thread (G\"odel, Turing, Lawvere, Yanofsky, Hofstadter); and a
+\emph{phenomenology of manifestation} thread (Husserl, Merleau-Ponty).
 
 Yet these traditions usually remain separated.  Formal diagonal results
 stop at negative obstruction.  Phenomenological accounts stop at
@@ -176,23 +167,12 @@ The contribution of this paper is the classification and synthesis of
 those theorem surfaces.  We are careful throughout to distinguish engine
 theorems, packaging theorems, and synthesis conclusions.
 
-These historical figures are cited not because they anticipated the present
-synthesis in full, but because they articulate neighboring problems or
-supply formal tools that the present theorem stack now composes:
-\begin{itemize}[nosep]
-\item \textbf{Plato, Aristotle}: classical formulations of reflexive
-      knowledge.
-\item \textbf{Augustine}: inward orientation of reflective self-knowledge.
-\item \textbf{Descartes}: self-presence at the center of the modern subject.
-\item \textbf{Kant}: constitutive limits on self-cognition.
-\item \textbf{Hegel}: systematic radicalization of reflexivity.
-\item \textbf{G\"odel}: internal totalization limits in formal systems.
-\item \textbf{Turing}: mechanized total decision limits on self-referential problems.
-\item \textbf{Lawvere}: diagonal structure at the level of maps and universal representation.
-\item \textbf{Yanofsky}: common architecture across paradoxes, incompleteness, and self-reference.
-\item \textbf{Hofstadter}: reflexive-loop intuition and the self-modeling imagination.
-\item \textbf{Husserl, Merleau-Ponty}: non-objectifiable self-presence and manifestation.
-\end{itemize}
+These figures are cited not because they anticipated the present synthesis
+in full, but because they supply \emph{neighboring problems and tools} now
+composed in the theorem stack: reflexive self-knowledge and its limits
+(classical thread); diagonal and decision-theoretic structure (formal
+thread); non-objectifiable presence and manifestation (phenomenological
+thread).
 
 \subsection*{What this paper does}
 
@@ -344,6 +324,10 @@ architecture whose explanatory burden includes reflexive access,
 self-related manifestation, or internal self-location sufficient to
 motivate one of the exhaustion routes A--C or the residual route~D.
 \end{definition}
+
+This is a \textbf{synthesis-level working definition} for purposes of route
+classification in this paper, not a claim to a final metaphysical essence
+of observerhood.
 
 Different theorem engines formalize different parts of this burden:
 \RI{} addresses the self-model burden, \RFO{} addresses the
@@ -730,6 +714,10 @@ That is not the path taken here.  The argument has a structural hinge:
       coordination.
 \end{enumerate}
 
+The burden is therefore not merely to reject Routes A--C, but to show that
+observerhood admits a positive architecture not already captured by those
+reductive forms.  The remainder of the paper discharges that burden.
+
 The awareness arc of the reflexive-closure program already provides
 exactly that.  The next sections develop the positive content; but first,
 we must show that this residual is not a disguised instance of the blocked
@@ -793,6 +781,11 @@ residual is structurally distinguished from every blocked route.
 %% ===================================================================
 \section{The positive survivor: a minimal four-stage spine}
 \label{sec:spine}
+
+The terms ``awareness,'' ``Alpha,'' ``ground,'' and ``manifestation'' are
+not introduced here as free philosophical stipulations: they name formally
+developed structures and theorems in the imported awareness arc (the same
+arc summarized in \cref{sec:status}).
 
 The awareness arc is not a cloud of references.  It is a minimal survivor
 spine with four stages, each adding a necessary structural ingredient.
@@ -959,14 +952,20 @@ already formalized in the awareness arc.
 We can now state the final synthesis result, combining
 \Cref{prop:neg,prop:pos}.
 
+We state the \textbf{summit synthesis theorem} whose negative clauses are
+discharged by external engines, whose positive clause composes the
+awareness arc, and whose route-partition packaging is certified in the thin
+\ONE{} layer (\cref{sec:status,app:formalization}).
+
 \begin{theorem}[Observer Non-Exhaustibility]
 \label{thm:summit}
 \hfill
 \begin{enumerate}[label=(\roman*),leftmargin=2.2em]
-\item Observerhood is not internally exhaustible by the principal
-      reductive routes: not by parametric self-modeling, not by internal
-      reflective closure, and not by total internal certification or
-      final internal self-theory.
+\item Within the route partition of \Cref{def:routes} (for observer
+      architectures in the sense of \Cref{def:obs}), observerhood is not
+      internally exhaustible by the principal reductive routes: not by
+      parametric self-modeling, not by internal reflective closure, and
+      not by total internal certification or final internal self-theory.
 \item The admissible survivor architecture is the awareness-grounded
       residual class: non-collapsing, minimally ternary, and coordinated
       by ground, articulation, and manifestation.
@@ -977,8 +976,9 @@ We can now state the final synthesis result, combining
 \end{theorem}
 
 \begin{proof}[Synthesis proof]
-Clause~(i) follows from \Cref{prop:neg}: \RI{} blocks Route~A, \RFO{}
-blocks Route~B, and \ICA{} + \SEM{} block Route~C.  Clause~(ii) follows
+Clause~(i) combines \Cref{def:routes,def:obs} with \Cref{prop:neg}:
+\RI{} blocks Route~A, \RFO{} blocks Route~B, and \ICA{} + \SEM{} block
+Route~C.  Clause~(ii) follows
 from \Cref{prop:pos}: the awareness arc supplies the four-stage survivor
 architecture.  Clause~(iii) is the \ONE{} packaging theorem
 \leanref{route\_partition\_residual\_of\_not\_ABC}, proved by case
@@ -995,10 +995,11 @@ wholly inside \ONE{} alone.
 \end{proof}
 
 \begin{keybox}[title={Formal summit}]
-Observerhood is non-exhaustible in a precise formal sense.  The principal
-internal reductive routes fail.  What remains is not blank unknowability
-but an awareness-grounded residual architecture with a positive and
-formally articulated structure.
+Under the stated route partition and theorem-status discipline
+(\cref{sec:status}), observerhood is non-exhaustible along the principal
+internal reductive lanes.  What remains is not blank unknowability but an
+awareness-grounded residual architecture with a positive and formally
+articulated structure.
 \end{keybox}
 
 %% ===================================================================
@@ -1041,9 +1042,10 @@ that certifies the classification surface in \Lean.
 \begin{keybox}[title={The novelty is the synthesis}]
 What is new is the formal synthesis in which the principal internal
 exhaustion routes are separately blocked and the positive residual
-architecture is formally identified.  The observer is shown to be
-non-exhaustible not by vague appeal to mystery, but by the joint force of
-multiple theorem engines and an awareness-grounded survivor structure.
+architecture is formally identified.  Relative to that reductive route
+partition, the observer is shown to be non-exhaustible not by vague appeal
+to mystery, but by the joint force of multiple theorem engines and an
+awareness-grounded survivor structure.
 \end{keybox}
 
 %% ===================================================================
@@ -1055,24 +1057,13 @@ historical arc.
 
 The preceding thinkers are cited not because they anticipated this
 synthesis in full, but because they articulate neighboring problems or
-supply tools that the present theorem stack now composes.
-
-\begin{itemize}[nosep]
-\item \textbf{G\"odel} teaches that internal totalization in formal
-      systems meets principled limits.
-\item \textbf{Turing} teaches that mechanized total decision fails on
-      self-referential problems.
-\item \textbf{Lawvere} shows how diagonal structure arises at the level
-      of maps and universal representation.
-\item \textbf{Yanofsky} articulates the common architecture across
-      paradoxes, incompleteness, and self-reference.
-\item \textbf{Hofstadter} saw, with imaginative force, that reflexive
-      loops and self-modeling are not accidental curiosities but lie near
-      the center of mind and intelligence.
-\item \textbf{Husserl and Merleau-Ponty} transformed the problem of
-      self-knowledge into a problem of non-objectifiable self-presence
-      and manifestation.
-\end{itemize}
+supply tools that the present theorem stack now composes.  On the formal
+side, G\"odel and Turing fix limits to internal totalization and mechanized
+decision on self-referential problems; Lawvere and Yanofsky articulate
+diagonal and universality structure; Hofstadter supplies enduring intuition
+about strange loops and self-modeling.  On the phenomenological side,
+Husserl and Merleau-Ponty redirect self-knowledge toward non-objectifiable
+presence and manifestation.
 
 None of these figures gives the exact synthesis accomplished here.
 G\"odel does not classify observer architectures.  Lawvere does not
@@ -1179,7 +1170,8 @@ cite index remains \texttt{NOTES/Combined\_Lean\_Manifests.md}.
 \section{Conclusion}
 \label{sec:conclusion}
 
-The observer is non-exhaustible.
+Within the principal internal reductive route partition fixed in this
+paper, the observer is non-exhaustible.
 
 This is not because formal methods fail, nor because nothing precise can
 be said, nor because we retreat into mysticism when self-reference becomes
@@ -1202,8 +1194,9 @@ manifestation, localized in awareness and irreducible to the routes that
 sought to exhaust it.
 \end{keybox}
 
-That is the classification theorem of Observer Non-Exhaustibility.  The
-claim is both negative and positive: negative, because it blocks the
+That is the classification theorem of Observer Non-Exhaustibility,
+\emph{under the internal reductive route partition of} \Cref{def:routes}.
+The claim is both negative and positive: negative, because it blocks the
 principal reductive routes; positive, because it identifies the survivor
 structure rather than leaving only an unnamed gap.
 
