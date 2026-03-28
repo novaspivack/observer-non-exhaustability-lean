@@ -1,26 +1,46 @@
 # observer-non-exhaustability-lean
 
-**Machine-checked layer** for **Observer Non-Exhaustibility (ONE)** when this repo is checked out **inside** the outer project: see outer [`specs/INCOMPLETE/IN-PROCESS/EPIC_001_OBSERVER_NON_EXHAUSTIBILITY/EPIC_001_MASTER_ORCHESTRATION.md`](../../specs/INCOMPLETE/IN-PROCESS/EPIC_001_OBSERVER_NON_EXHAUSTIBILITY/EPIC_001_MASTER_ORCHESTRATION.md). Thin interfaces, route types, imported lemmas per **`SPEC_003_RCS`** Lean policy — **not** a fourth obstruction engine and **not** a home for RI/RFO/ICA flagship reproofs.
+**Thin packaging Lean layer** for **Observer Non-Exhaustibility (ONE)** — checked out inside the outer
+**`Observer-Non-Exhaustibility`** repo as a **submodule**. This **packages** the case partition and
+summit **citation surface**; it **does not** reprove RI, RFO, ICA, or awareness flagship theorems.
+See outer **`SPEC_003_RCS`** and **`EPIC_001`**.
 
 **Spelling:** GitHub slugs use **Exhaustability**; specs and papers use **Non-Exhaustibility** / **ONE**.
 
-## Repository layout (same pattern as Internal-Completion-Architecture)
+## Layout (packaging modules)
 
-- This directory is its **own git repository**.
-- The **outer** repo **`Observer-Non-Exhaustibility`** lists it as a **submodule** (see outer `.gitmodules`: `url = ./observer-non-exhaustability-lean`, resolving to the sibling GitHub repo under the same org).
-- **Lean work:** commit **here** (`cd observer-non-exhaustability-lean && git commit …`).
-- **Outer** (specs, docs, submodule pointer): commit from the parent root **after** updating this repo when both change.
+| Path | Role |
+|------|------|
+| `Observer/Nonexhaustability/Core/Routes.lean` | `ObserverExhaustionRoute` enum (**Routes A–D** scaffold). |
+| `Observer/Nonexhaustability/Bridge/FromRI.lean` | **Route A** — RI wrapper (`ParametricSelfModelRouteBlocked`, …). |
+| `Observer/Nonexhaustability/Bridge/FromRFO.lean` | **Route B** — RFO fold pattern (`SPEC_013` bridge). |
+| `Observer/Nonexhaustability/Bridge/FromCertification.lean` | **Route C** — `no_final_self_theory` (SEM); ICA/adequacy re-exports **TODO** when pinned. |
+| `Observer/Nonexhaustability/Bridge/FromAwareness.lean` | **Route D** — re-exports awareness arc theorems. |
+| `Observer/Nonexhaustability/Theorems/Classification.lean` | **Summit packaging** — `observer_non_exhaustibility_summit` (∧ of negative engines). |
+
+**Summit theorem names:** `observer_non_exhaustibility_summit`, `observer_non_exhaustibility_classification`, `only_awareness_residual_route_remains` (same proof; paper-facing aliases).
+
+## Dependencies (Lake / git pins)
+
+Pinned in `lakefile.lean`: **mathlib** `v4.29.0-rc6`, **representational-incompleteness-lean**, **reflective-fold-obstruction-lean**, **nems-lean** (must be a **sibling** package of reflexive-closure under `.lake/packages/`), **reflexive-closure-lean**. Toolchain matches Mathlib: see `lean-toolchain`.
 
 ## Build
 
 ```bash
-cd observer-non-exhaustability-lean   # or stay here if already in submodule root
-lake build
+cd observer-non-exhaustability-lean
+lake update
+lake exe cache get    # Mathlib binary cache; strongly recommended
+lake build Observer.Nonexhaustability
 ```
 
-## Publishing the submodule remote
+Executable target **`observer-nonexhaustability`** (smoke `Main.lean`) is optional and may pull extra Mathlib for linking.
 
-After the GitHub repo exists, ensure the outer `.gitmodules` `url` is the SSH or HTTPS clone URL you want (or keep the relative `./observer-non-exhaustability-lean` if that matches your org layout). From the **outer** root: `git submodule sync`, then commit `.gitmodules` if it changed.
+## Repository workflow (same pattern as Internal-Completion-Architecture)
+
+- This directory is its **own git repository**.
+- The **outer** repo lists it as a **submodule** (`.gitmodules`: `url = ./observer-non-exhaustability-lean`).
+- **Lean changes:** commit **here** first.
+- **Outer** (specs, docs, submodule pointer): commit from the parent root when the submodule commit changes.
 
 ## Package
 
