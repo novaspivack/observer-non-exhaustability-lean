@@ -19,6 +19,10 @@ philosophical conclusion (“therefore only **Route D**”) are **paper-layer**;
 about separation of Π-types (each engine keeps its own hypotheses).
 
 **Route D** exports: see `Bridge/FromAwareness`.
+
+**Formal partition:** `observer_exhaustion_route_exhaustive_four` states every route tag is one of
+A–D.  `route_partition_residual_of_not_ABC` states that within that finite menu, if a route is not
+the three principal negative lanes, it is the awareness residual lane.
 -/
 
 universe u
@@ -52,7 +56,7 @@ theorem observer_non_exhaustibility_summit :
       (fun {_} F _ ext hFP => certification_route_engine F ext hFP))
 
 /--
-Alternate export name (same proof) — use in prose that says “classification theorem.”
+Classification-shaped export of the summit conjunction (same proof as `observer_non_exhaustibility_summit`).
 -/
 theorem observer_non_exhaustibility_classification :
     Observer.Nonexhaustability.Bridge.ParametricSelfModelRouteBlocked ∧
@@ -65,7 +69,8 @@ theorem observer_non_exhaustibility_classification :
   observer_non_exhaustibility_summit
 
 /--
-Paper-facing name for the **negative elimination core**; pair with `Bridge/FromAwareness` for **Route D**.
+Summit conjunction under a name that emphasizes **negative route elimination**; pair with
+`Bridge/FromAwareness` for the **Route D** positive exports.
 -/
 theorem only_awareness_residual_route_remains :
     Observer.Nonexhaustability.Bridge.ParametricSelfModelRouteBlocked ∧
@@ -88,12 +93,26 @@ theorem awareness_residual_designated_admissible :
   rfl
 
 /--
+The route vocabulary is a **four-way exhaustive disjunction**: every formal route tag is
+A, B, C, or D.  This is the internal finite menu over which residual classification is stated
+—it does not quantify over informal observer theories.
+-/
+theorem observer_exhaustion_route_exhaustive_four (r : ObserverExhaustionRoute) :
+    r = .parametricSelfModel ∨ r = .internalClosure ∨ r = .totalCertification ∨
+    r = .awarenessResidual := by
+  cases r
+  · exact Or.inl rfl
+  · exact Or.inr <| Or.inl rfl
+  · exact Or.inr <| Or.inr <| Or.inl rfl
+  · exact Or.inr <| Or.inr <| Or.inr rfl
+
+/--
 **Route-partition residual theorem** — within the formal `ObserverExhaustionRoute` partition,
 any route that is not **A**, not **B**, and not **C** is classified as **D** (`awarenessResidual`).
 
 This does **not** quantify over all imaginable informal observer theories; it exhausts the
-formal partition already introduced in ONE. The paper can therefore say that *within the stated
-route vocabulary* the awareness-grounded lane is the only surviving classification.
+formal partition already introduced in ONE. *Within the stated route vocabulary*, the
+awareness-grounded lane is the only tag consistent with ruling out Routes A–C.
 -/
 theorem route_partition_residual_of_not_ABC (r : ObserverExhaustionRoute)
     (hA : r ≠ .parametricSelfModel)
