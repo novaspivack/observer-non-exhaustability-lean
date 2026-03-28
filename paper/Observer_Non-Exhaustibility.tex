@@ -361,10 +361,10 @@ ways, while Route~D survives as a structured positive residual.
 \section{Method and formal provenance}
 \label{sec:method}
 
-This is a synthesis summit paper.  It does not claim a new base diagonal
-theorem, a new base fold theorem, or a new foundational awareness theorem.
-Its contribution is the formal integration of already discharged theorem
-engines into a final classification.
+This is a synthesis summit paper: its contribution is integrating
+already-discharged theorem engines into a final classification, not
+proving new base diagonal, fold, or foundational awareness theorems
+(theorem-status layers: \cref{sec:status}).
 
 The synthesis uses four theorem pillars.
 \begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
@@ -392,21 +392,17 @@ reflective fold obstruction (closure vs architectural fold); internal
 completion plus semantic self-description (certification and final
 theory); awareness arc (non-collapsing, minimally ternary residual).
 Each pillar is a discharged engine or program slice composed here into
-one classification story---not reproved inside \ONE.
+one classification story.
 \end{keybox}
 
-The current \ONE{} repository is intentionally thin.  It is a final
-synthesis-and-classification layer, not a duplicate proof engine.  Its
-associated thin \Lean{} packaging layer introduces route vocabulary and
-wrapper theorems for the classification surface.  That layer certifies
-the summit packaging; it does not duplicate the mathematical work of the
-source libraries.
+The \ONE{} repository is intentionally thin: a synthesis-and-classification
+layer whose \Lean{} packaging certifies route vocabulary and summit
+conjunction without duplicating engine proofs (\cref{sec:artifact}).
 
 \begin{remark}
-The distinction between a theorem engine and a synthesis summit is
-essential.  A theorem engine proves a new base obstruction.  A synthesis
-summit composes multiple discharged engines into a final classification.
-This paper belongs to the second category.
+This paper is a synthesis summit, not a new obstruction engine; the
+engine vs.\ packaging vs.\ synthesis distinction is fixed once in
+\cref{sec:status}.
 \end{remark}
 
 %% ===================================================================
@@ -596,7 +592,12 @@ machine-checked here.
 \section{Route C fails: total internal certification and final self-theory}
 \label{sec:routeC}
 
-A third strategy attempts to exhaust observerhood by internal
+Route~C is the \emph{internal-totalization lane}: whether by certification,
+self-theory, or self-description, the observer is supposed to achieve
+\emph{internal semantic finality}.  The \ICA{} bridge and \SEM{} line block
+that ambition under complementary hypotheses; what follows spells this out.
+
+Concretely, one hopes to exhaust observerhood by internal
 certification.  Perhaps the observer needs neither a universal self-model
 nor an invariant-breaking fold; perhaps it only needs a total
 self-certifying architecture or a final internal self-theory.
@@ -781,6 +782,11 @@ residual is structurally distinguished from every blocked route.
 %% ===================================================================
 \section{The positive survivor: a minimal four-stage spine}
 \label{sec:spine}
+
+The awareness arc is introduced here not because it is merely
+philosophically attractive, but because it is the already-formalized
+theorem family whose structure matches the residual conditions forced by
+the failure of Routes A--C.
 
 The terms ``awareness,'' ``Alpha,'' ``ground,'' and ``manifestation'' are
 not introduced here as free philosophical stipulations: they name formally
@@ -1124,9 +1130,8 @@ synthesis honest.
 \section{Machine-checked artifact}
 \label{sec:artifact}
 
-The theorem engines consumed here are externally formalized and
-machine-checked in \Lean{} companion libraries.  \ONE{} itself adds a
-thin packaging layer rather than a new engine.  Its role is to provide:
+Engines are discharged in external \Lean{} libraries (\cref{sec:status});
+\ONE{} contributes the packaging items below.
 \begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
 \item route vocabulary for observer-exhaustion attempts;
 \item wrappers from the external theorem engines into the classification
@@ -1137,27 +1142,16 @@ thin packaging layer rather than a new engine.  Its role is to provide:
       theorem over the formal route vocabulary.
 \end{enumerate}
 
-The methodological point matters.  The summit claim of this paper is not
-backed by hand-waving references to prior work alone; it is backed by a
-deliberately thin machine-checked synthesis layer whose task is exactly to
-certify the case partition and final packaging surface.
-
 \begin{keybox}[title={Engines vs \ONE{} packaging}]
-The heavy proofs live in \RI, \RFO, \ICA/\SEM, and the reflexive-closure
-libraries.  \ONE{} contributes the case partition vocabulary, import
-wrappers, summit conjunction, and route-partition residual theorem---a
-thin certification layer, not a fourth independent obstruction program.
+Heavy proofs live in \RI, \RFO, \ICA/\SEM, and reflexive-closure libraries;
+\ONE{} certifies the case partition and import surface (\cref{sec:status}).
 \end{keybox}
 
 \subsection*{What \ONE{} proves directly}
 
-The thin \ONE{} layer proves the route vocabulary and summit packaging
-surface.  The underlying engine theorems are proved in \RI, \RFO,
-\ICA/\SEM, and the awareness libraries.  The strongest prose-level ``only
-Route~D remains'' claim is a synthesis theorem backed by those theorem
-surfaces, not a giant new foundation theorem proved wholly inside \ONE{}
-alone.  This is stated with surgical honesty so that the reader never
-confuses the packaging layer with the engine proofs.
+Packaging only (Appendix~\ref{app:formalization}): engines stay in \RI,
+\RFO, \ICA/\SEM, and awareness libraries.  Prose ``only Route~D'' remains
+synthesis-level per \cref{sec:status}.
 
 \medskip
 \noindent
@@ -1171,7 +1165,7 @@ cite index remains \texttt{NOTES/Combined\_Lean\_Manifests.md}.
 \label{sec:conclusion}
 
 Within the principal internal reductive route partition fixed in this
-paper, the observer is non-exhaustible.
+paper, the observer is non-exhaustible (\cref{sec:status,thm:summit}).
 
 This is not because formal methods fail, nor because nothing precise can
 be said, nor because we retreat into mysticism when self-reference becomes
