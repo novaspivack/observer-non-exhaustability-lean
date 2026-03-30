@@ -3,6 +3,10 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\-\do\.\do\_\do\/}
+\makeatother
 \usepackage{cleveref}
 \usepackage{enumitem}
 \usepackage{booktabs}
@@ -128,9 +132,11 @@ reflective fold obstruction, awareness arc, Lean~4
 
 \noindent\textbf{MSC 2020:} 03F40, 03B70, 68T27
 
-\noindent\textbf{Code/Data availability:}
-\url{https://github.com/novaspivack/observer-non-exhaustibility-lean}
-(\texttt{observer-non-exhaustability-lean} development; \texttt{lake build}; repository \texttt{README} and \texttt{lakefile.lean}.)
+\noindent\textbf{Code/Data availability:}\newline
+\begingroup\raggedright
+\url{https://github.com/novaspivack/observer-non-exhaustibility-lean}\linebreak
+(\path{observer-non-exhaustability-lean} development; \path{lake build}; repository \path{README} and \path{lakefile.lean}.)
+\par\endgroup
 
 \section{Premises, disagreement coordinates, and trust boundary}\label{sec:premises-one-flagship}
 \begin{keybox}[title=Where disagreement can (and cannot) live]
@@ -258,6 +264,7 @@ distinguished.
 \end{itemize}
 \end{keybox}
 
+\begin{sloppypar}
 \begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
 \item \textbf{Discharged engine theorems.}
       These are theorems proved in external machine-checked \Lean{}
@@ -311,6 +318,7 @@ distinguished.
       \emph{every} conceivable observer theory falls under this partition)
       is a synthesis-level assertion, not a single machine-checked lemma.
 \end{enumerate}
+\end{sloppypar}
 
 \begin{remark}
 This three-layer separation is maintained throughout.  When we write
@@ -1229,13 +1237,13 @@ structure rather than leaving only an unnamed gap.
 
 \noindent
 Table~\ref{tab:one-packaging} lists the \emph{thin packaging} declarations
-under namespace \texttt{Observer.Nonexhaustability} in the
-\texttt{observer-non-exhaustability-lean} submodule.  The same rows are
-maintained in the outer repository as \texttt{MANIFEST.md} (\ONE{}
-packaging \Lean{} table), \texttt{ARTIFACT.md}, and
-\texttt{NOTES/FORMALIZATION\_MAP.md}.  Discharged-engine proof obligations
+under namespace \path{Observer.Nonexhaustability} in the
+\path{observer-non-exhaustability-lean} submodule. The same rows are
+maintained in the outer repository as \path{MANIFEST.md} (\ONE{}
+packaging \Lean{} table), \path{ARTIFACT.md}, and\linebreak
+\path{NOTES/FORMALIZATION_MAP.md}. Discharged-engine proof obligations
 live in the libraries cited in \cref{sec:status}; the concatenated
-cross-library manifest is \texttt{NOTES/Combined\_Lean\_Manifests.md}.
+cross-library manifest is \path{NOTES/Combined_Lean_Manifests.md}.
 
 \medskip
 \begin{table}[p]
