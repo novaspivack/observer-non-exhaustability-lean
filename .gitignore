@@ -5,5 +5,4 @@ paper/*.out
 paper/*.fls
 paper/*.fdb_latexmk
 paper/*.synctex.gz
-paper/*.pdf
 paper/*.bak
