@@ -50,3 +50,6 @@ Executable target **`observer-nonexhaustability`** (smoke `Main.lean`) is option
 
 - **Lake name:** `observer-nonexhaustability`
 - **Root namespace:** `Observer.Nonexhaustability`
+<!-- NOVA_ZPO_ZENODO_SOFTWARE_BEGIN -->
+**Archival software (Zenodo):** https://doi.org/10.5281/zenodo.19429254
+<!-- NOVA_ZPO_ZENODO_SOFTWARE_END -->
