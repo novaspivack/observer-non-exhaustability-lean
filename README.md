@@ -1,5 +1,23 @@
 # observer-non-exhaustability-lean
 
+
+## Research Program
+
+This repository is part of the **Reflexive Reality** research program by [Nova Spivack](https://www.novaspivack.com/).
+
+**What this formalizes:** Observer Non-Exhaustibility (§B5e): three blocked families of observer exhaustion strategies; positive non-collapsing residual architecture.
+
+| Link | Description |
+|------|-------------|
+| [Research page](https://www.novaspivack.com/research/) | Full index of all papers, programs, and Lean archives |
+| [Full abstracts](https://novaspivack.github.io/research/abstracts/#b5e-observer-non-exhaustibility) | Complete abstract for this library's papers |
+| [Zenodo program hub](https://doi.org/10.5281/zenodo.19429270) | Citable DOI hub for the NEMS program |
+
+All results are machine-checked in Lean 4 with a zero-sorry policy on proof targets.
+See [MANIFEST.md](MANIFEST.md) for the sorry audit (if present).
+
+---
+
 Lean 4 library for **Observer Non-Exhaustibility (ONE)** — packages the case partition and summit citation surface for the ONE program. This library does not reprove RI, RFO, ICA, or awareness flagship theorems; it imports and re-exports them.
 
 **Spelling:** GitHub slugs use **Exhaustability**; the papers use **Non-Exhaustibility** / **ONE**.
