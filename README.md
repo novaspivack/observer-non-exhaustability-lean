@@ -48,7 +48,7 @@ The summit theorem `observer_non_exhaustibility_summit` packages the joint resul
 
 ## Dependencies
 
-Pinned in `lakefile.lean`: **mathlib** `v4.29.0-rc6`, **representational-incompleteness-lean**, **reflective-fold-obstruction-lean**, **nems-lean**, **reflexive-closure-lean**.
+Pinned in `lakefile.lean`: **mathlib** `v4.29.1`, **representational-incompleteness-lean**, **reflective-fold-obstruction-lean**, **nems-lean**, **reflexive-closure-lean**.
 
 ## Build
 
